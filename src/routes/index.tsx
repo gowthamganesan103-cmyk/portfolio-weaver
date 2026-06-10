@@ -50,7 +50,7 @@ function Welcome({ onDone }: { onDone: () => void }) {
       className="fixed inset-0 z-50 flex items-center justify-center bg-background"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, y: "-100%" }}
-      transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+      transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] as [number, number, number, number] }}
     >
       <div className="text-center">
         <motion.p
@@ -84,7 +84,7 @@ const fade = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" },
-  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
 };
 
 function Index() {
@@ -127,7 +127,7 @@ function Index() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 2.6, duration: 0.9, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
             className="mt-6 font-display text-5xl leading-[1.05] md:text-8xl"
           >
             Building <em className="text-primary not-italic">intelligent</em>
@@ -183,7 +183,7 @@ function Index() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 whileHover={{ y: -6 }}
                 className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-colors hover:border-primary/40"
               >
